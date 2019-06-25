@@ -1,0 +1,8 @@
+#вектор коэффициентов лин. регрессии для предсказания 1й перем. (1 столбца) по остальным
+import numpy as np
+from numpy import linalg
+dataSet = np.array([[2,60], [2,50], [2, 75]])
+myData = np.copy(dataSet)
+Y = np.copy(myData[:,0])
+myData[:,0]=1
+regrVec = ((linalg.inv(myData.T.dot(myData))).dot(myData.T)).dot(Y)
