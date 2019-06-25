@@ -1,8 +1,8 @@
-#Vector of linear regression coefficients to predict the 1st var. (1 column) by the remaining columns
+#Vector of linear regression coefficients to predict the 1st var. (1st column) by the remaining columns
 import numpy as np
 from numpy import linalg
-dataSet = np.array([[2,60], [2,50], [2, 75]])
-myData = np.copy(dataSet)
-Y = np.copy(myData[:,0])
-myData[:,0]=1
-regrVec = ((linalg.inv(myData.T.dot(myData))).dot(myData.T)).dot(Y)
+data_set = np.array([[2,60], [2,50], [2, 75]]) #any other dataset
+my_data = np.copy(data_set)
+y = np.copy(my_data[:,0])
+my_data[:,0]=1
+regr_vec = ((linalg.inv(my_data.T.dot(my_data))).dot(my_data.T)).dot(y)
