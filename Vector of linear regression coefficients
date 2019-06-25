@@ -1,4 +1,4 @@
-#вектор коэффициентов лин. регрессии для предсказания 1й перем. (1 столбца) по остальным
+#Vector of linear regression coefficients to predict the 1st var. (1 column) by the remaining columns
 import numpy as np
 from numpy import linalg
 dataSet = np.array([[2,60], [2,50], [2, 75]])
