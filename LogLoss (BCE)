@@ -1,0 +1,19 @@
+from functools import reduce
+import math
+
+y=[0,0]
+c1=[0.99, 0.01] #examples
+c2=[1, 0] 
+c3=[0.5, 0.5] 
+
+def summ(acc, item):
+    return acc+item
+
+def bce(y1, y=0):
+    return -y*math.log(y1) - (1-y)*math.log(1-y1)
+    
+bceAll=list(map(bce, c3))
+
+bceAllSum=(reduce(summ, bceAll, 0))
+
+print(bceAllSum)
