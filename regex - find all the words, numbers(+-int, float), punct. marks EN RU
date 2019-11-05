@@ -1,0 +1,2 @@
+#hyphen is a part of the word, else leave only [a-zA-Zа-яА-ЯёЁ]+ before the 1st |
+r'[a-zA-Zа-яА-ЯёЁ]*\-?[a-zA-Zа-яА-ЯёЁ]+|[+-]?\d*[\.\,]?\d+|[\.]+|[^0-9 А-Яа-яёЁA-Za-z\n\t\r]'
